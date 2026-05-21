@@ -1,0 +1,7 @@
+class: OrderItem
+table: order_item
+fields:
+  productId: Product?, relation
+  productName: String
+  quantity: int
+  priceAtPurchase: double

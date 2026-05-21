@@ -1,0 +1,11 @@
+name: _
+publish_to: none
+
+environment:
+  sdk: '^3.8.0'
+
+workspace:
+  - shopwave_backend_client
+  - shopwave_backend_server
+  - shopwave_backend_flutter
+

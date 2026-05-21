@@ -1,0 +1,8 @@
+class: Order
+table: order
+fields:
+  status: OrderStatus
+  items: List<int>
+  total: double
+  createdAt: DateTime
+  userId: int, relation(parent=user)

@@ -1,0 +1,44 @@
+services:
+  # Development services
+  postgres:
+    image: pgvector/pgvector:pg16
+    ports:
+      - "8090:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: shopwave_backend
+      POSTGRES_PASSWORD: "KxuXFR90x1f-AeFV02HhXsZ-XZttGwze"
+    volumes:
+      - shopwave_backend_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:6.2.6
+    ports:
+      - "8091:6379"
+    command: redis-server --requirepass "SZx0ZStGVldTlRNokEJLtpomEOami33d"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+  # Test services
+  postgres_test:
+    image: pgvector/pgvector:pg16
+    ports:
+      - "9090:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: shopwave_backend_test
+      POSTGRES_PASSWORD: "7FnsNS9j8ET3zp8hY5sjY7BeaPOYRZgV"
+    volumes:
+      - shopwave_backend_test_data:/var/lib/postgresql/data
+
+  redis_test:
+    image: redis:6.2.6
+    ports:
+      - "9091:6379"
+    command: redis-server --requirepass "LBO5uMiVg34mGhiQ4TnSgnvWmYFHzLpE"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+volumes:
+  shopwave_backend_data:
+  shopwave_backend_test_data:

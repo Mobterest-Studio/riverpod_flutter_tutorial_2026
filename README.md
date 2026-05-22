@@ -3,6 +3,8 @@
 > Build a complete, production-quality e-commerce app from scratch.
 > 12 lessons · Feature-first architecture · Serverpod REST backend
 
+**[Watch the tutorial series on YouTube](https://youtu.be/xYNNVfvAuDc?si=fPs00aOny_McQdRo)**
+
 ---
 
 ## What Is This?

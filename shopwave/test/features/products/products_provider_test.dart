@@ -1,5 +1,3 @@
-// test/features/products/products_provider_test.dart — example
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:dio/dio.dart';
@@ -100,12 +98,12 @@ class FakeDio implements Dio {
     Options? options,
     CancelToken? cancelToken,
     ProgressCallback? onReceiveProgress,
-  }) async =>
-      (await _onGet(path)) as Response<T>;
+  }) async => (await _onGet(path)) as Response<T>;
 
   @override
-  dynamic noSuchMethod(Invocation invocation) =>
-      throw UnimplementedError('${invocation.memberName} not stubbed in FakeDio');
+  dynamic noSuchMethod(Invocation invocation) => throw UnimplementedError(
+    '${invocation.memberName} not stubbed in FakeDio',
+  );
 }
 
 const testProduct = Product(
